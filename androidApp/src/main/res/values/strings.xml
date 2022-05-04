@@ -11,4 +11,5 @@
     <string name="password_hint">Password</string>
     <string name="continue_hint">Continue</string>
     <string name="remember_me_check">Remember me</string>
+    <string name="password_confirm_hint">Confirm password</string>
 </resources>
