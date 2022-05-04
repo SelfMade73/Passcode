@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="sign_in_title">Sign In</string>
+    <string name="forgot_password_title">Forgot password</string>
+    <string name="sign_up_subtitle">Don\'t have an account?</string>
+    <string name="sign_in_subtitle">Don\'t have an account?</string>
+    <string name="forgot_password_subtitle">dawdkawkdmawkdalwdw121</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="email_hint">Email address</string>
+    <string name="password_hint">Password</string>
+    <string name="continue_hint">Continue</string>
+    <string name="remember_me_check">Remember me</string>
+</resources>
