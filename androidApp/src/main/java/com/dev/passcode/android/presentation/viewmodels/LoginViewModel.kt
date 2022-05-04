@@ -20,8 +20,16 @@ class LoginViewModel : ViewModel(), EventHandler<LoginEvent> {
             is EmailChanged -> emailChanged(event)
             is PasswordChanged -> passwordChanged(event)
             is RememberMeChanged -> rememberMeChanged(event)
+            is PasswordConfirmChanged -> passwordConfirmChanged(event)
         }
 
+    }
+
+    private fun passwordConfirmChanged(confirmChanged: PasswordConfirmChanged) {
+        val newConfirmPassword = confirmChanged.passwordConfirmValue
+        if (viewState.value.passwordValue != newConfirmPassword) {
+            _viewState.value = _viewState.value.copy(passwordValue = newConfirmPassword)
+        }
     }
 
     private fun rememberMeChanged(rememberMeChanged: RememberMeChanged) {

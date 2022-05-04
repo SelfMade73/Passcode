@@ -26,6 +26,7 @@ import com.dev.passcode.android.R
 import com.dev.passcode.android.presentation.ui.components.ClassicCucumberButton
 import com.dev.passcode.android.presentation.ui.theme.AppTheme
 import com.dev.passcode.android.presentation.ui.views.SignInView
+import com.dev.passcode.android.presentation.ui.views.SignUpView
 import com.dev.passcode.android.presentation.viewmodels.LoginViewModel
 
 @Composable
@@ -87,8 +88,18 @@ fun LoginScreen(
                 }
             }
             item {
-                when(loginState){
-                    LoginState.SIGN_UP -> {}
+                when (loginState) {
+                    LoginState.SIGN_UP -> SignUpView(
+                        viewState = this@with,
+                        onEmailChanged = {
+                            viewModel.obtainEvent(EmailChanged(it))
+                        }, onPasswordChanged = {
+                            viewModel.obtainEvent(PasswordChanged(it))
+                        },
+                        onPasswordConfirmChanged = {
+
+                        }
+                    )
                     LoginState.SIGN_IN -> SignInView(
                         viewState = this@with, onEmailChanged = {
                             viewModel.obtainEvent(EmailChanged(it))
@@ -101,10 +112,13 @@ fun LoginScreen(
                     LoginState.FORGOT -> TODO()
                 }
             }
-            item{
+            item {
                 ClassicCucumberButton(
-                    onClick = {}, modifier = Modifier.fillMaxWidth()
-                ){
+                    onClick = {},
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp)
+                ) {
                     Text(
                         modifier = Modifier.weight(1F),
                         text = stringResource(id = R.string.continue_hint),
