@@ -12,4 +12,7 @@
     <string name="continue_hint">Continue</string>
     <string name="remember_me_check">Remember me</string>
     <string name="password_confirm_hint">Confirm password</string>
+    <string name="enter_pin_code">Enter pin code</string>
+    <string name="confirm_pin_code">Confirm enter code</string>
+    <string name="passwords_not_equals">Passwords not equals</string>
 </resources>

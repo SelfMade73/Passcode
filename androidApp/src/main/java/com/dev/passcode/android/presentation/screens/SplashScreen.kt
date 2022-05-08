@@ -11,6 +11,6 @@ fun SplashScreen(
     navController: NavController
 ){
     LaunchedEffect(key1 = Unit){
-        navController.navigate(NavigationTree.LoginScreen.screenName)
+        navController.navigate(NavigationTree.PinScreen.screenName)
     }
 }
