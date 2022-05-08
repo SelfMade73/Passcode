@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.dev.passcode.android.presentation.nav.NavigationTree
 import com.dev.passcode.android.presentation.screens.login.LoginScreen
+import com.dev.passcode.android.presentation.screens.pin.PinCodeScreen
 
 @Composable
 fun AppScreen() {
@@ -19,6 +20,9 @@ fun AppScreen() {
         }
         composable(NavigationTree.LoginScreen.screenName){
             LoginScreen(navController = navController)
+        }
+        composable(NavigationTree.PinScreen.screenName){
+            PinCodeScreen(navController = navController)
         }
     }
 }
